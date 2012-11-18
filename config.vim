@@ -6,7 +6,7 @@
 " Color
 " ---------------
 set background=dark
-colorscheme jellybeans
+colorscheme base16-tomorrow
 
 " -----------------------------
 " Backups, Tmp Files, and Undo

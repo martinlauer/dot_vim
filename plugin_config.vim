@@ -71,8 +71,8 @@ let g:indent_guides_enable_on_vim_startup=1
 " ---------------
 " Session
 " ---------------
-let g:session_autosave=0
-let g:session_autoload=0
+let g:session_autosave=1
+let g:session_autoload=1
 nnoremap <leader>os :OpenSession<CR>
 
 " ---------------
@@ -126,28 +126,28 @@ let g:ctrlp_map = ''
 
 " Ensure max height isn't too large. (for performance)
 let g:ctrlp_max_height = 10
-let g:CommandTMaxHeight = 10
+"let g:CommandTMaxHeight = 10
 
 " Set the default escape keybinding to, you guessed it, escape.
-let g:CommandTCancelMap = '<esc>'
+"let g:CommandTCancelMap = '<esc>'
 
 " Dynamically use Command T or ctrlp.vim based on availability of Ruby.
 " We do this because Command T is much faster than ctrlp.vim.
-if has('ruby')
-  " --------
-  " Use Command T since we've got Ruby
-  " --------
-
-  " Conditional Mappings
-  if has('unix')
-    nnoremap <silent><C-t> :CommandT<CR>
-  else
-    nnoremap <silent><M-t> :CommandT<CR>
-  endif
-
-  " Leader Commands
-  nnoremap <leader>t :CommandT<CR>
-else
+"if has('ruby')
+"  " --------
+"  " Use Command T since we've got Ruby
+"  " --------
+"
+"  " Conditional Mappings
+"  if has('unix')
+"    nnoremap <silent><C-t> :CommandT<CR>
+"  else
+"    nnoremap <silent><M-t> :CommandT<CR>
+"  endif
+"
+"  " Leader Commands
+"  nnoremap <leader>t :CommandT<CR>
+"else
   " --------
   " Use ctrlp.vim since we don't have Ruby
   " --------
@@ -162,7 +162,7 @@ else
   " Leader Commands
   nnoremap <leader>t :CtrlPRoot<CR>
   nnoremap <leader>b :CtrlPBuffer<CR>
-endif
+"endif
 
 " Always use CtrlP for most recently used files and relative dierctory.
 if has('unix')
