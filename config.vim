@@ -23,6 +23,7 @@ set undodir=~/.vim/.undo
 " ---------------
 set ruler          " Ruler on
 set number         " Line numbers on
+set wrap         " Line wrapping on
 set nowrap         " Line wrapping off
 set laststatus=2   " Always show the statusline
 set cmdheight=2    " Make the command area two lines high
