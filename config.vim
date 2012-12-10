@@ -40,6 +40,8 @@ if exists('+ballooneval')
   " 100 second delay seems to be the only way to disable the tooltips
   set balloondelay=100000
 endif
+" relative line numbers
+set rnu
 
 " ---------------
 " Behaviors
