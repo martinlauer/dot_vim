@@ -15,7 +15,7 @@ if has('gui_macvim')
 endif
 
 " local gui settings
-set lines=60 columns=100
+"set lines=60 columns=86
 " highlight current line
 set cursorline
 " font for the gui
