@@ -43,14 +43,22 @@ endfunction
 " ---------------
 " Syntastic
 " ---------------
-let g:syntastic_enable_signs=1
-let g:syntastic_auto_loc_list=1
+let g:syntastic_enable_signs=0
+let g:syntastic_auto_loc_list=0
 
 " Platform-specific config files
 if has('win32') || has('win64')
   let g:syntastic_jsl_conf=$HOME.'/.vim/config/windows/syntastic/jsl.conf'
   let g:syntastic_disabled_filetypes=['sh'] " Disable .sh on Windows
 endif
+
+let g:syntastic_check_on_open=1
+let g:syntastic_auto_jump=1
+
+let g:syntastic_error_symbol='✗'
+let g:syntastic_warning_symbol='⚠'
+
+let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': ['ruby', 'php', 'json', 'javascript'], 'passive_filetypes': ['puppet'] }
 
 " ---------------
 " NERDTree
@@ -71,8 +79,8 @@ let g:indent_guides_enable_on_vim_startup=1
 " ---------------
 " Session
 " ---------------
-let g:session_autosave=0
-let g:session_autoload=0
+let g:session_autosave=1
+let g:session_autoload=1
 nnoremap <leader>os :OpenSession<CR>
 
 " ---------------
@@ -121,33 +129,55 @@ nmap <silent> <leader>wo :ZoomWin<CR>
 " ---------------
 " Command T and ctrlp.vim
 " ---------------
+
+" use sweet extensions
+"let g:ctrlp_extensions = ['tag', 'buffertag', 'dir']
+
+" don't reuse these windows
+let g:ctrlp_reuse_window = 'netrw\|help\|quickfix'
+
+" ignoring version tracking files
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+
+" Multiple VCS's:
+let g:ctrlp_user_command = {
+  \ 'types': {
+    \ 1: ['.git', 'cd %s && git ls-files'],
+    \ 2: ['.hg', 'hg --cwd %s locate -I .'],
+    \ },
+  \ 'fallback': 'find %s -type f'
+  \ }
+
+" open file in new vsplit when using <c-y>
+let g:ctrlp_open_new_file = 'r'
+
 " Ensure Ctrl-P isn't bound by default
 let g:ctrlp_map = ''
 
 " Ensure max height isn't too large. (for performance)
 let g:ctrlp_max_height = 10
-let g:CommandTMaxHeight = 10
+"let g:CommandTMaxHeight = 10
 
 " Set the default escape keybinding to, you guessed it, escape.
-let g:CommandTCancelMap = '<esc>'
+"let g:CommandTCancelMap = '<esc>'
 
 " Dynamically use Command T or ctrlp.vim based on availability of Ruby.
 " We do this because Command T is much faster than ctrlp.vim.
-if has('ruby')
-  " --------
-  " Use Command T since we've got Ruby
-  " --------
-
-  " Conditional Mappings
-  if has('unix')
-    nnoremap <silent><C-t> :CommandT<CR>
-  else
-    nnoremap <silent><M-t> :CommandT<CR>
-  endif
-
-  " Leader Commands
-  nnoremap <leader>t :CommandT<CR>
-else
+"if has('ruby')
+"  " --------
+"  " Use Command T since we've got Ruby
+"  " --------
+"
+"  " Conditional Mappings
+"  if has('unix')
+"    nnoremap <silent><C-t> :CommandT<CR>
+"  else
+"    nnoremap <silent><M-t> :CommandT<CR>
+"  endif
+"
+"  " Leader Commands
+"  nnoremap <leader>t :CommandT<CR>
+"else
   " --------
   " Use ctrlp.vim since we don't have Ruby
   " --------
@@ -162,7 +192,7 @@ else
   " Leader Commands
   nnoremap <leader>t :CtrlPRoot<CR>
   nnoremap <leader>b :CtrlPBuffer<CR>
-endif
+"endif
 
 " Always use CtrlP for most recently used files and relative dierctory.
 if has('unix')
@@ -236,7 +266,9 @@ noremap gS :SidewaysLeft<cr>
 " Markdown-Preview
 " ---------------
 nmap <Leader>md :MarkdownPreview<CR>
-vmap <Leader>md :MarkdownPreview<CR>
+nmap <Leader>md :MarkdownPreview<CR>
+vmap <Leader>mp :Mmd2Pdf<CR>
+vmap <Leader>mp :Mmd2Pdf<CR>
 
 " ---------------
 " switch.vim
@@ -258,3 +290,8 @@ let g:html_indent_style1 = "inc"
 nmap <Leader>bi :BundleInstall<CR>
 nmap <Leader>bu :BundleInstall!<CR> " Because this also updates
 nmap <Leader>bc :BundleClean<CR>
+
+" ---------------
+" Thesaurus
+" ---------------
+let g:thesaurus_file = "/usr/local/share/dict/mthesaur"

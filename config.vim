@@ -6,7 +6,7 @@
 " Color
 " ---------------
 set background=dark
-colorscheme jellybeans
+colorscheme base16-railscasts
 
 " -----------------------------
 " Backups, Tmp Files, and Undo
@@ -23,6 +23,7 @@ set undodir=~/.vim/.undo
 " ---------------
 set ruler          " Ruler on
 set number         " Line numbers on
+set wrap         " Line wrapping on
 set nowrap         " Line wrapping off
 set laststatus=2   " Always show the statusline
 set cmdheight=2    " Make the command area two lines high
@@ -39,6 +40,8 @@ if exists('+ballooneval')
   " 100 second delay seems to be the only way to disable the tooltips
   set balloondelay=100000
 endif
+" relative line numbers
+set rnu
 
 " ---------------
 " Behaviors
@@ -53,10 +56,10 @@ set clipboard+=unnamed " Yanks go on clipboard instead.
 set autowrite          " Writes on make/shell commands
 set timeoutlen=350     " Time to wait for a command (after leader for example)
 set foldlevelstart=99  " Remove folds
-set formatoptions=crql
 set iskeyword+=$,@     " Add extra characters that are valid parts of variables
 set nostartofline      " Don't go to the start of the line after some commands
 set scrolloff=3        " Keep three lines below the last line when scrolling
+set pastetoggle=<F2>
 
 " ---------------
 " Text Format
@@ -118,3 +121,6 @@ set mouse=a    " Mouse in all modes
 
 " Better complete options to speed it up
 set complete=.,w,b,u,U
+
+" ignore some pointless files
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip

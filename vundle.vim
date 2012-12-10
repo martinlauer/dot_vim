@@ -17,11 +17,12 @@ Bundle 'gmarik/vundle'
 
 " Navigation
 Bundle 'ZoomWin'
-Bundle 'wincent/Command-T'
+"Bundle 'wincent/Command-T' " disabled Command-T because the c-extension won't work with vim
 " This fork is required due to remapping ; to :
 Bundle 'christoomey/vim-space'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'kien/ctrlp.vim'
+Bundle 'sudo.vim'
 " UI Additions
 Bundle 'mutewinter/vim-indent-guides'
 Bundle 'Lokaltog/vim-powerline'
@@ -29,6 +30,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'Rykka/colorv.vim'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'tomtom/quickfixsigns_vim'
+Bundle 'chriskempson/base16-vim'
 " Commands
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-surround'
@@ -42,8 +44,9 @@ Bundle 'keepcase.vim'
 Bundle 'scratch.vim'
 Bundle 'mattn/zencoding-vim'
 Bundle 'mutewinter/GIFL'
-Bundle 'swaroopch/vim-markdown-preview'
+Bundle 'martinlauer/vim-markdown-preview'
 Bundle 'AndrewRadev/switch.vim'
+"Bundle 'bronson/vim-toggle-wrap'
 " Automatic Helpers
 Bundle 'IndexedSearch'
 Bundle 'xolox/vim-session'
@@ -52,6 +55,8 @@ Bundle 'scrooloose/syntastic'
 Bundle 'ervandew/supertab'
 Bundle 'gregsexton/MatchTag'
 Bundle 'Shougo/neocomplcache'
+Bundle 'smartword'
+Bundle 'MarkdownFootnotes'
 " Language Additions
 "   Ruby
 Bundle 'vim-ruby/vim-ruby'
@@ -59,9 +64,9 @@ Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-rake'
 "   JavaScript
-Bundle 'pangloss/vim-javascript'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'leshill/vim-json'
+"Bundle 'pangloss/vim-javascript'
+"Bundle 'kchmck/vim-coffee-script'
+Bundle 'vim-json-bundle'
 "   HTML
 Bundle 'nono/vim-handlebars'
 Bundle 'othree/html5.vim'
@@ -79,6 +84,7 @@ Bundle 'acustodioo/vim-tmux'
 Bundle 'hallison/vim-markdown'
 Bundle 'groenewege/vim-less'
 Bundle 'wavded/vim-stylus'
+Bundle 'jngeist/vim-multimarkdown'
 " MatchIt
 Bundle 'matchit.zip'
 Bundle 'kana/vim-textobj-user'
@@ -86,3 +92,14 @@ Bundle 'nelstrom/vim-textobj-rubyblock'
 " Libraries
 Bundle 'L9'
 Bundle 'tpope/vim-repeat'
+Bundle 'Thesaurus'
+
+" Handy Tools
+Bundle 'xolox/vim-notes'
+
+" Sippets
+Bundle 'snipmate-snippets'
+Bundle 'garbas/vim-snipmate'
+ "dependency for snipmate-snippets
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
