@@ -92,7 +92,6 @@ set list
 
 " Show trailing spaces as dots and carrots for extended lines.
 " From Janus, http://git.io/PLbAlw
-
 " Reset the listchars
 set listchars=""
 " a tab should display as "  ", trailing whitespace as "."
@@ -124,3 +123,16 @@ set complete=.,w,b,u,U
 
 " ignore some pointless files
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+
+
+" ------------------
+" Disable Arrow Keys
+" ------------------
+noremap  <Up> ""
+noremap! <Up> <Esc>
+noremap  <Down> ""
+noremap! <Down> <Esc>
+noremap  <Left> ""
+noremap! <Left> <Esc>
+noremap  <Right> ""
+noremap! <Right> <Esc>
