@@ -267,8 +267,11 @@ noremap gS :SidewaysLeft<cr>
 " ---------------
 nmap <Leader>md :MarkdownPreview<CR>
 nmap <Leader>md :MarkdownPreview<CR>
-vmap <Leader>mp :Mmd2Pdf<CR>
-vmap <Leader>mp :Mmd2Pdf<CR>
+
+" ---------------
+" Rake
+" ---------------
+nmap <Leader>ra :Rake<CR>
 
 " ---------------
 " switch.vim
