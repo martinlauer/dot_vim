@@ -129,10 +129,10 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 " Disable Arrow Keys
 " ------------------
 noremap  <Up> ""
-noremap! <Up> <Esc>
+"noremap! <Up> <Esc>
 noremap  <Down> ""
-noremap! <Down> <Esc>
+"noremap! <Down> <Esc>
 noremap  <Left> ""
-noremap! <Left> <Esc>
+"noremap! <Left> <Esc>
 noremap  <Right> ""
-noremap! <Right> <Esc>
+"noremap! <Right> <Esc>
