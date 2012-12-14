@@ -96,6 +96,7 @@ Bundle 'Thesaurus'
 
 " Handy Tools
 Bundle 'xolox/vim-notes'
+Bundle 'aperezdc/vim-template'
 
 " Sippets
 Bundle 'snipmate-snippets'
