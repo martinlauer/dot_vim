@@ -16,7 +16,6 @@ endif
 
 " highlight current line
 set cursorline
-" font for the gui
-set guifont=Droid\ Sans\ Mono\ Dotted\ for\ Powerline:h13
+set guifont=Menlo\ for\ Powerline:h13
 set lines=30
 set columns=90
