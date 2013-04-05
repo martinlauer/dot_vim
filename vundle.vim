@@ -31,6 +31,8 @@ Bundle 'Rykka/colorv.vim'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'tomtom/quickfixsigns_vim'
 Bundle 'chriskempson/base16-vim'
+Bundle 'summerfruit256.vim'
+Bundle 'github-theme'
 " Commands
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-surround'
