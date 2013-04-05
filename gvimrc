@@ -14,6 +14,8 @@ if has('gui_macvim')
   macmenu &Tools.List\ Errors key=<nop>
 endif
 
+" highlight current line
+set cursorline
 colorscheme github
 set guifont=Menlo\ for\ Powerline:h13
 set lines=30
