@@ -14,9 +14,9 @@ if has('gui_macvim')
   macmenu &Tools.List\ Errors key=<nop>
 endif
 
-" local gui settings
-"set lines=60 columns=86
 " highlight current line
 set cursorline
 " font for the gui
 set guifont=Droid\ Sans\ Mono\ Dotted\ for\ Powerline:h13
+set lines=30
+set columns=90
