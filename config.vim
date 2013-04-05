@@ -6,7 +6,6 @@
 " Color
 " ---------------
 set background=dark
-colorscheme base16-railscasts
 
 " -----------------------------
 " Backups, Tmp Files, and Undo
