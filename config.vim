@@ -22,7 +22,8 @@ set undodir=~/.vim/.undo
 " ---------------
 set ruler          " Ruler on
 set number         " Line numbers on
-set wrap         " Line wrapping on
+set rnu            " Set relative numbers
+set cursorline    " highlight current line
 "set wrap         " Line wrapping on
 set nowrap         " Line wrapping off
 set laststatus=2   " Always show the statusline
