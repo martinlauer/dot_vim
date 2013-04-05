@@ -35,7 +35,7 @@ Bundle 'summerfruit256.vim'
 Bundle 'github-theme'
 " Commands
 Bundle 'scrooloose/nerdcommenter'
-Bundle 'tpope/vim-surround'
+Bundle 'surround.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'godlygeek/tabular'
 Bundle 'mileszs/ack.vim'
