@@ -99,6 +99,7 @@ Bundle 'Thesaurus'
 " Handy Tools
 Bundle 'xolox/vim-notes'
 Bundle 'aperezdc/vim-template'
+Bundle 'VisIncr'
 Bundle 'substitute.vim'
 
 " Sippets
