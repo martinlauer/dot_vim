@@ -17,6 +17,6 @@ endif
 " highlight current line
 set cursorline
 colorscheme github
-set guifont=Menlo\ for\ Powerline:h13
+set guifont=Droid\ Sans\ Mono\ Slashed\ for\ Powerline:h13
 set lines=30
 set columns=90
