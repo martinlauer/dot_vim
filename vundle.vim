@@ -87,6 +87,7 @@ Bundle 'hallison/vim-markdown'
 Bundle 'groenewege/vim-less'
 Bundle 'wavded/vim-stylus'
 Bundle 'jngeist/vim-multimarkdown'
+Bundle 'chef.vim'
 " MatchIt
 Bundle 'matchit.zip'
 Bundle 'kana/vim-textobj-user'
