@@ -51,7 +51,6 @@ Bundle 'AndrewRadev/switch.vim'
 "Bundle 'bronson/vim-toggle-wrap'
 " Automatic Helpers
 Bundle 'IndexedSearch'
-Bundle 'xolox/vim-session'
 Bundle 'Raimondi/delimitMate'
 Bundle 'scrooloose/syntastic'
 Bundle 'ervandew/supertab'
@@ -98,7 +97,6 @@ Bundle 'tpope/vim-repeat'
 Bundle 'Thesaurus'
 
 " Handy Tools
-Bundle 'xolox/vim-notes'
 Bundle 'aperezdc/vim-template'
 Bundle 'VisIncr'
 Bundle 'substitute.vim'
