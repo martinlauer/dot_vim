@@ -100,6 +100,7 @@ Bundle 'Thesaurus'
 Bundle 'aperezdc/vim-template'
 Bundle 'VisIncr'
 Bundle 'substitute.vim'
+Bundle 'techlivezheng/vim-plugin-minibufexpl'
 
 " Sippets
 Bundle 'snipmate-snippets'
