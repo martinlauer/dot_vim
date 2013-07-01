@@ -53,8 +53,6 @@ Bundle 'MarkdownFootnotes'
 "   Ruby
 Bundle 'vim-ruby/vim-ruby'
 "   JavaScript
-"Bundle 'pangloss/vim-javascript'
-"Bundle 'kchmck/vim-coffee-script'
 Bundle 'vim-json-bundle'
 "   Other Languages
 Bundle 'msanders/cocoa.vim'
