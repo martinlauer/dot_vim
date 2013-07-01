@@ -43,7 +43,6 @@ Bundle 'keepcase.vim'
 Bundle 'scratch.vim'
 Bundle 'mattn/zencoding-vim'
 Bundle 'mutewinter/GIFL'
-Bundle 'martinlauer/vim-markdown-preview'
 Bundle 'AndrewRadev/switch.vim'
 "Bundle 'bronson/vim-toggle-wrap'
 " Automatic Helpers
