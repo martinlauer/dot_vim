@@ -40,7 +40,6 @@ Bundle 'scratch.vim'
 Bundle 'mattn/zencoding-vim'
 Bundle 'mutewinter/GIFL'
 Bundle 'AndrewRadev/switch.vim'
-"Bundle 'bronson/vim-toggle-wrap'
 " Automatic Helpers
 Bundle 'IndexedSearch'
 Bundle 'Raimondi/delimitMate'
