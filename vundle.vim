@@ -68,9 +68,6 @@ Bundle 'tpope/vim-rake'
 "Bundle 'pangloss/vim-javascript'
 "Bundle 'kchmck/vim-coffee-script'
 Bundle 'vim-json-bundle'
-"   TomDoc
-Bundle 'mutewinter/tomdoc.vim'
-Bundle 'jc00ke/vim-tomdoc'
 "   Other Languages
 Bundle 'msanders/cocoa.vim'
 Bundle 'mutewinter/taskpaper.vim'
