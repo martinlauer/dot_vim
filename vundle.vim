@@ -17,7 +17,6 @@ Bundle 'gmarik/vundle'
 
 " Navigation
 Bundle 'ZoomWin'
-"Bundle 'wincent/Command-T' " disabled Command-T because the c-extension won't work with vim
 " This fork is required due to remapping ; to :
 Bundle 'christoomey/vim-space'
 Bundle 'Lokaltog/vim-easymotion'
