@@ -57,9 +57,6 @@ Bundle 'MarkdownFootnotes'
 " Language Additions
 "   Ruby
 Bundle 'vim-ruby/vim-ruby'
-Bundle 'tpope/vim-haml'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-rake'
 "   JavaScript
 "Bundle 'pangloss/vim-javascript'
 "Bundle 'kchmck/vim-coffee-script'
