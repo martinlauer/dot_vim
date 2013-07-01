@@ -79,4 +79,8 @@ Bundle 'substitute.vim'
 Bundle 'techlivezheng/vim-plugin-minibufexpl'
 
 " Sippets
+Bundle 'snipmate-snippets'
 Bundle 'garbas/vim-snipmate'
+ "dependency for snipmate-snippets
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
