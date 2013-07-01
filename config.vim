@@ -5,7 +5,7 @@
 " ---------------
 " Color
 " ---------------
-set background=dark
+set background=light
 
 " -----------------------------
 " Backups, Tmp Files, and Undo
