@@ -5,7 +5,9 @@
 " ---------------
 " Color
 " ---------------
-set background=light
+" avoid Error "E411: highlight group not found: Normal"
+colorscheme default
+set background=dark
 
 " -----------------------------
 " Backups, Tmp Files, and Undo

@@ -23,5 +23,3 @@ source ~/.vim/functions.vim
 " Auto commands.
 source ~/.vim/autocmds.vim
 
-" avoid Error "E411: highlight group not found: Normal"
-colorscheme default
