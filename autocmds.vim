@@ -18,4 +18,8 @@ if has("autocmd")
 
   " Fix trailing whitespace in my most used programming langauges
   autocmd BufWritePre *.py,*.coffee,*.rb silent! :StripTrailingWhiteSpace
+
+  " Capistrano
+  autocmd BufNewFile,BufRead Capfile,*.cap setfiletype ruby
+  
 endif
