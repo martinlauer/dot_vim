@@ -143,3 +143,6 @@ noremap  <Right> ""
 
 " Capistrano
 au BufNewFile,BufRead Capfile, *.cap set filetype=ruby
+
+" Override write permissions
+cmap w!! %!sudo tee > /dev/null %
