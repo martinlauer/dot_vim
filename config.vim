@@ -140,3 +140,6 @@ noremap  <Left> ""
 "noremap! <Left> <Esc>
 noremap  <Right> ""
 "noremap! <Right> <Esc>
+
+" Capistrano
+au BufNewFile,BufRead Capfile, *.cap set filetype=ruby
