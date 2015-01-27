@@ -6,8 +6,8 @@
 " Color
 " ---------------
 " avoid Error "E411: highlight group not found: Normal"
-colorscheme github
-set background=light
+colorscheme vividchalk
+set background=dark
 
 " -----------------------------
 " Backups, Tmp Files, and Undo
