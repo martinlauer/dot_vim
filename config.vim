@@ -28,8 +28,8 @@ set rnu            " Set relative numbers
 set cursorline    " highlight current line
 "set wrap         " Line wrapping on
 set nowrap         " Line wrapping off
-set laststatus=2   " Always show the statusline
-set cmdheight=2    " Make the command area two lines high
+set laststatus=1   " Always show the statusline
+set cmdheight=1    " Make the command area two lines high
 set encoding=utf-8
 set noshowmode     " Don't show the mode since Powerline shows it
 set title          " Set the title of the window in the terminal to the file
