@@ -6,7 +6,7 @@
 " space.vim
 " ---------------
 " Disables space mappings in select mode to fix snipMate.
-let g:space_disable_select_mode=1
+"let g:space_disable_select_mode=1
 
 " ---------------
 " Neocachecompl
@@ -14,7 +14,7 @@ let g:space_disable_select_mode=1
 let g:neocomplcache_enable_at_startup=1
 let g:neocomplcache_enable_cursor_hold_i=1
 let g:neocomplcache_cursor_hold_i_time=200
-let g:neocomplcache_auto_completion_start_length=1
+let g:neocomplcache_auto_completion_start_length=3
 
 " Tab / Shift-Tab to cycle completions
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
@@ -63,24 +63,35 @@ let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': ['ruby', 'php
 " ---------------
 " NERDTree
 " ---------------
-nnoremap <leader>nn :NERDTreeToggle<CR>
-nnoremap <leader>nf :NERDTreeFind<CR>
-let g:NERDTreeShowBookmarks=1
-let g:NERDTreeChDirMode=2 " Change the NERDTree directory to the root node
-let g:NERDTreeMinimalUI=1
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType")
-  \&& b:NERDTreeType == "primary") | q | endif
+"nnoremap <leader>nn :NERDTreeToggle<CR>
+"nnoremap <leader>nf :NERDTreeFind<CR>
+"let g:NERDTreeShowBookmarks=1
+"let g:NERDTreeChDirMode=2 " Change the NERDTree directory to the root node
+"let g:NERDTreeMinimalUI=1
+"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType")
+  "\&& b:NERDTreeType == "primary") | q | endif
+
+" ---------------
+" minibufexpl
+" ---------------
+"let g:miniBufExplVSplit = 30   " column width in chars
+"let g:miniBufExplBRSplit = 0   " Put new window below
+                                 " current or on the
+                                 " right for vertical split
 
 " ---------------
 " Indent Guides
 " ---------------
 let g:indent_guides_enable_on_vim_startup=1
+:nmap <Leader>ig :IndentGuidesToggle<CR>
+:nmap <Leader>ie :IndentGuidesEnable<CR>
+:nmap <Leader>id :IndentGuidesDisable<CR>
 
 " ---------------
 " Session
 " ---------------
-let g:session_autosave=1
-let g:session_autoload=1
+let g:session_autosave='yes'
+let g:session_autoload='yes'
 nnoremap <leader>os :OpenSession<CR>
 
 " ---------------
@@ -124,14 +135,17 @@ nmap <Leader>gx :wincmd h<CR>:q<CR>
 " Zoomwin
 " ---------------
 " Zoom Window to Full Size
-nmap <silent> <leader>wo :ZoomWin<CR>
+"nmap <silent> <leader>wo :ZoomWin<CR>
 
 " ---------------
 " Command T and ctrlp.vim
 " ---------------
 
+" set cache dir
+let g:ctrlp_cache_dir = $HOME.'/.cache/ctrlp'
+
 " use sweet extensions
-"let g:ctrlp_extensions = ['tag', 'buffertag', 'dir']
+let g:ctrlp_extensions = ['dir']
 
 " don't reuse these windows
 let g:ctrlp_reuse_window = 'netrw\|help\|quickfix'
@@ -140,43 +154,52 @@ let g:ctrlp_reuse_window = 'netrw\|help\|quickfix'
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
 " Multiple VCS's:
-let g:ctrlp_user_command = {
-  \ 'types': {
-    \ 1: ['.git', 'cd %s && git ls-files'],
-    \ 2: ['.hg', 'hg --cwd %s locate -I .'],
-    \ },
-  \ 'fallback': 'find %s -type f'
-  \ }
+"let g:ctrlp_user_command = {
+  "\ 'types': {
+    "\ 1: ['.git', 'cd %s && git ls-files'],
+    "\ 2: ['.hg', 'hg --cwd %s locate -I .'],
+    "\ },
+  "\ 'fallback': 'find %s -type f'
+  "\ }
+
+" use the silver searcher
+"if executable('ag')
+  "unlet g:ctrlp_user_command
+  "let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+"endif
+
 
 " open file in new vsplit when using <c-y>
 let g:ctrlp_open_new_file = 'r'
 
 " Ensure Ctrl-P isn't bound by default
-let g:ctrlp_map = ''
+let g:ctrlp_map = '<C-p>'
+
+let g:ctrlp_working_path_mode = 'cr'
 
 " Ensure max height isn't too large. (for performance)
 let g:ctrlp_max_height = 10
-"let g:CommandTMaxHeight = 10
+let g:CommandTMaxHeight = 10
 
 " Set the default escape keybinding to, you guessed it, escape.
-"let g:CommandTCancelMap = '<esc>'
+let g:CommandTCancelMap = '<esc>'
 
 " Dynamically use Command T or ctrlp.vim based on availability of Ruby.
 " We do this because Command T is much faster than ctrlp.vim.
 "if has('ruby')
-"  " --------
-"  " Use Command T since we've got Ruby
-"  " --------
-"
-"  " Conditional Mappings
-"  if has('unix')
-"    nnoremap <silent><C-t> :CommandT<CR>
-"  else
-"    nnoremap <silent><M-t> :CommandT<CR>
-"  endif
-"
-"  " Leader Commands
-"  nnoremap <leader>t :CommandT<CR>
+  "" --------
+  "" Use Command T since we've got Ruby
+  "" --------
+
+  "" Conditional Mappings
+  "if has('unix')
+    "nnoremap <silent><C-t> :CommandT<CR>
+  "else
+    "nnoremap <silent><M-t> :CommandT<CR>
+  "endif
+
+  "" Leader Commands
+  "nnoremap <leader>t :CommandT<CR>
 "else
   " --------
   " Use ctrlp.vim since we don't have Ruby
@@ -232,7 +255,7 @@ let g:Powerline_mode_cs = 'SB'
 " jellybeans.vim colorscheme tweaks
 " ---------------
 " Make cssAttrs (center, block, etc.) the same color as units
-hi! link cssAttr Constant
+"hi! link cssAttr Constant
 
 " ---------------
 " Ack.vim
@@ -290,11 +313,22 @@ let g:html_indent_style1 = "inc"
 " ---------------
 " Vundle
 " ---------------
-nmap <Leader>bi :BundleInstall<CR>
-nmap <Leader>bu :BundleInstall!<CR> " Because this also updates
-nmap <Leader>bc :BundleClean<CR>
+nmap <Leader>pi :PluginInstall<CR>
+nmap <Leader>pu :PluginInstall!<CR> " Because this also updates
+nmap <Leader>pc :PluginClean<CR>
 
 " ---------------
 " Thesaurus
 " ---------------
 let g:thesaurus_file = "/usr/local/share/dict/mthesaur"
+
+" ---------------
+" gist.vim
+" ---------------
+let g:gist_clip_command = 'pbcopy'
+let g:gist_open_browser_after_post = 1
+
+" ---------------
+" easytags
+" ---------------
+:let g:easytags_events = ['BufWritePost']
