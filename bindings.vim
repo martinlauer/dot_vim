@@ -4,6 +4,7 @@
 " Set leader to ,
 " Note: This line MUST come before any <leader> mappings
 let mapleader=","
+set timeout timeoutlen=1500
 
 " Fixes common typos
 command! W w
