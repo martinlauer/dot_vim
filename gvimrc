@@ -12,11 +12,13 @@ if has('gui_macvim')
   macmenu &Tools.Make key=<nop>
   " D-l
   macmenu &Tools.List\ Errors key=<nop>
-endif
 
-" highlight current line
-set cursorline
-colorscheme github
-set guifont=Droid\ Sans\ Mono\ Slashed\ for\ Powerline:h13
-set lines=30
-set columns=90
+  " highlight current line
+  set cursorline
+  "colorscheme Tomorrow-Night-Eighties
+  "set background=dark
+  set guifont=Inconsolata:h15
+  set lines=50
+  set columns=140
+
+endif
