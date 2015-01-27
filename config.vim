@@ -126,7 +126,7 @@ set mouse=a    " Mouse in all modes
 set complete=.,w,b,u,U
 
 " ignore some pointless files
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.tar.gz
 
 
 " ------------------
