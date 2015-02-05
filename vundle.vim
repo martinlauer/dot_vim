@@ -100,6 +100,7 @@ Plugin 'xolox/vim-notes'
 "Plugin 'fholgado/minibufexpl.vim'
 "Plugin 'Tagma-Buffer-Manager'
 Plugin 'ack.vim'
+Plugin 'Auto-Pairs'
 
 " Sippets
 "Plugin 'snipmate-snippets'
