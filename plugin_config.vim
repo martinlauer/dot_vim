@@ -145,7 +145,7 @@ nmap <Leader>gx :wincmd h<CR>:q<CR>
 let g:ctrlp_cache_dir = $HOME.'/.cache/ctrlp'
 
 " use sweet extensions
-let g:ctrlp_extensions = ['dir']
+let g:ctrlp_extensions = ['dir', 'bookmarkdir', 'undo', 'line', 'mixed']
 
 " don't reuse these windows
 let g:ctrlp_reuse_window = 'netrw\|help\|quickfix'
