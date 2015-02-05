@@ -21,6 +21,7 @@ Plugin 'gmarik/vundle'
 "Plugin 'christoomey/vim-space'
 "Plugin 'Lokaltog/vim-easymotion'
 Plugin 'kien/ctrlp.vim'
+Plugin 'tacahiroy/ctrlp-funky'
 "Plugin 'wincent/Command-T'
 "Plugin 'sudo.vim'
 " UI Additions

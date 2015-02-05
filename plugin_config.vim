@@ -184,6 +184,8 @@ let g:CommandTMaxHeight = 10
 " Set the default escape keybinding to, you guessed it, escape.
 let g:CommandTCancelMap = '<esc>'
 
+let g:ctrlp_funky_matchtype = 'path'
+
 " Dynamically use Command T or ctrlp.vim based on availability of Ruby.
 " We do this because Command T is much faster than ctrlp.vim.
 "if has('ruby')
@@ -215,6 +217,12 @@ let g:CommandTCancelMap = '<esc>'
   " Leader Commands
   nnoremap <leader>t :CtrlPRoot<CR>
   nnoremap <leader>b :CtrlPBuffer<CR>
+
+  " ctrlp-funky
+  nnoremap <Leader>fu :CtrlPFunky<Cr>
+  " narrow the list down with a word under cursor
+  nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
+
 "endif
 
 " Always use CtrlP for most recently used files and relative dierctory.
