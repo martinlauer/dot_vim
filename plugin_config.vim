@@ -193,12 +193,14 @@ else
   let g:ctrlp_map = '<M-t>'
 endif
 
-  " ctrlp-funky
-  nnoremap <Leader>fu :CtrlPFunky<Cr>
-  " narrow the list down with a word under cursor
-  nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
+" Leader Commands
+nnoremap <leader>t :CtrlP<CR>
+nnoremap <leader>b :CtrlPBuffer<CR>
 
-"endif
+" ctrlp-funky
+nnoremap <Leader>fu :CtrlPFunky<Cr>
+" narrow the list down with a word under cursor
+nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
 
 " Always use CtrlP for most recently used files and relative dierctory.
 if has('unix')
